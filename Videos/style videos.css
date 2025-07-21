@@ -1,0 +1,52 @@
+/* Modern Responsive Effects for Videos Folder */
+
+img {
+  transition: transform 0.18s cubic-bezier(.44,.3,.13,1.01), box-shadow 0.18s cubic-bezier(.44,.3,.13,1.01);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Grow effect on hover for desktop */
+img:hover, img:focus {
+  transform: scale(1.07);
+  box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+}
+
+/* Grow effect on tap for touchscreen devices */
+@media (pointer: coarse) {
+  img:active {
+    transform: scale(1.12);
+    box-shadow: 0 8px 36px rgba(0,0,0,0.22);
+  }
+}
+
+/* Responsive grid for folders with many images (optional, does not change HTML structure) */
+@media (min-width: 600px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+  img {
+    margin: 0.5rem;
+    flex: 0 1 300px;
+  }
+}
+@media (max-width: 599px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+    padding: 1rem;
+  }
+  img {
+    margin: 0.3rem;
+    flex: 0 1 48vw;
+  }
+}
