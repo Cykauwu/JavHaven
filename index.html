@@ -5,89 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jav Haven</title>
   <style>
-    body { background: #111; color: white; font-family: sans-serif; margin: 0; padding: 0; }
-    h1 { text-align: center; padding: 20px; background: #222; color: #ff4081; margin: 0; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; padding: 20px; }
-    .card { background: #1c1c1c; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px #000; }
-    .card a { color: #4fc3f7; text-decoration: none; font-weight: bold; display: block; margin-top: 10px; }
+    body {
+      background: #111;
+      color: white;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      padding: 24px 0 20px 0;
+      background: linear-gradient(90deg,#222 60%,#181818 100%);
+      color: #ff4081;
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      box-shadow: 0 2px 8px #0004;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      padding: 32px 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: linear-gradient(135deg, #222 80%, #1c1c1c 100%);
+      padding: 18px 12px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 16px #0006;
+      transition: transform 0.15s, box-shadow 0.15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover, .card:focus-within {
+      transform: translateY(-4px) scale(1.025);
+      box-shadow: 0 8px 32px #0009;
+      z-index: 1;
+    }
+    .card div:first-child {
+      font-size: 1.18rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      color: #ff4081;
+    }
+    .card img {
+      width: 180px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #0007;
+      transition: transform 0.25s cubic-bezier(.22,1,.36,1), box-shadow 0.2s;
+      background: #444;
+      margin-bottom: 14px;
+      pointer-events: auto;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /* Image scale effect on hover/focus/touch */
+    .card img:hover, 
+    .card img:active, 
+    .card:focus-within img {
+      transform: scale(1.09);
+      box-shadow: 0 6px 32px #ff408188, 0 2px 32px #000b;
+    }
+    /* Touch device: scale on tap (active) */
+    @media (hover: none) and (pointer: coarse) {
+      .card img:active {
+        transform: scale(1.12);
+        box-shadow: 0 6px 32px #ff4081cc, 0 2px 32px #000b;
+      }
+    }
+    .card a {
+      color: #4fc3f7;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+      font-size: 1.07rem;
+      padding: 8px 0 4px 0;
+      border-radius: 8px;
+      background: linear-gradient(90deg,#202c3a,#1c1c1c 70%);
+      box-shadow: 0 2px 8px #0003;
+      transition: background 0.13s, color 0.13s;
+    }
+    .card a:hover, .card a:focus {
+      background: linear-gradient(90deg,#4fc3f7 20%,#222 100%);
+      color: #222;
+    }
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr 1fr; gap: 14px; padding: 16px 4px; }
+      .card img { width: 100%; max-width: 180px; height: 120px; }
+      .card { padding: 10px 4px; }
+    }
+    @media (max-width: 400px) {
+      .grid { grid-template-columns: 1fr; padding: 4px; }
+      .card img { height: 90px; }
+    }
   </style>
   <script type='text/javascript' src='//pl27226095.profitableratecpm.com/26/04/da/2604daad8fc26b48a5e0489d6161cc26.js'></script>
 </head>
 <body>
   <h1>JavHaven</h1>
   <div class="grid">
-  	
-  	<div class="card">
+    <div class="card">
       <div>MIMK-113</div>
-      <img src="https://files.catbox.moe/lh281r.jpg" width="160" height="150">
+      <img src="https://files.catbox.moe/lh281r.jpg" alt="MIMK-113 Cover">
       <a href="Videos/MIMK-113.html">Download Now</a>
     </div>
-    
-      <div class="card">
+    <div class="card">
       <div>SONE-739</div>
-        <img src="https://files.catbox.moe/mx2vsj.jpg" width="160" height="150">
-       <a href="Videos/SONE-739.html">Download Now</a>
-      </div>
-      
-       <div class="card">
+      <img src="https://files.catbox.moe/mx2vsj.jpg" alt="SONE-739 Cover">
+      <a href="Videos/SONE-739.html">Download Now</a>
+    </div>
+    <div class="card">
       <div>ABF-250</div>
-         <img src="https://files.catbox.moe/eagyn8.jpg" width="160" height="150">
-       <a href="Videos/ABF-250.html">Download Now</a>
-      </div>
-
-       <div class="card">
+      <img src="https://files.catbox.moe/eagyn8.jpg" alt="ABF-250 Cover">
+      <a href="Videos/ABF-250.html">Download Now</a>
+    </div>
+    <div class="card">
       <div>ROYD-247</div>
-         <img src="https://files.catbox.moe/wvqiyn.jpg" width="160" height="150">
-       <a href="Videos/ROYD-247.html">Download Now</a>
-      </div>
-
-      <div class="card">
+      <img src="https://files.catbox.moe/wvqiyn.jpg" alt="ROYD-247 Cover">
+      <a href="Videos/ROYD-247.html">Download Now</a>
+    </div>
+    <div class="card">
       <div>SONE-793</div>
-        <img src="https://files.catbox.moe/yg5log.jpg" width="160" height="150">
-       <a href="Videos/SONE-793.html">Download Now</a>
-      </div>
-
-      <div class="card">
+      <img src="https://files.catbox.moe/yg5log.jpg" alt="SONE-793 Cover">
+      <a href="Videos/SONE-793.html">Download Now</a>
+    </div>
+    <div class="card">
       <div>PIYO-219</div>
-        <img src="https://files.catbox.moe/cplhdz.jpg" width="160" height="150">
-       <a href="Videos/PIYO-219.html">Download Now</a>
-      </div>
-
-      <div class="card">
+      <img src="https://files.catbox.moe/cplhdz.jpg" alt="PIYO-219 Cover">
+      <a href="Videos/PIYO-219.html">Download Now</a>
+    </div>
+    <div class="card">
       <div>GVH-761</div>
-        <img src="https://files.catbox.moe/5nyleg.jpg" width="160" height="150">
-       <a href="Videos/GVH-761.html">Download Now</a>
-      </div>
-
-      <div class="card">
+      <img src="https://files.catbox.moe/5nyleg.jpg" alt="GVH-761 Cover">
+      <a href="Videos/GVH-761.html">Download Now</a>
+    </div>
+    <div class="card">
       <div>JUBE-031</div>
-        <img src="https://files.catbox.moe/cushwn.jpg" width="160" height="150">
-       <a href="Videos/JUBE-031.html">Download Now</a>
-      </div>
-
-      <div class="card">
+      <img src="https://files.catbox.moe/cushwn.jpg" alt="JUBE-031 Cover">
+      <a href="Videos/JUBE-031.html">Download Now</a>
+    </div>
+    <div class="card">
       <div>BF-639</div>
-        <img src="https://files.catbox.moe/13xnl5.jpg" width="160" height="150">
-       <a href="Videos/BF-639.html">Download Now</a>
-      </div>
-
-      <div class="card">
+      <img src="https://files.catbox.moe/13xnl5.jpg" alt="BF-639 Cover">
+      <a href="Videos/BF-639.html">Download Now</a>
+    </div>
+    <div class="card">
       <div>BLK-395</div>
-        <img src="https://files.catbox.moe/1cvx2y.jpg" width="160" height="150">
-       <a href="Videos/BLK-395.html">Download Now</a>
-      </div>
-
-      <script type="text/javascript">
-	atOptions = {
-		'key' : '4ad9bc6dd4360ab653a13101431436d8',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/4ad9bc6dd4360ab653a13101431436d8/invoke.js"></script>
-
-
+      <img src="https://files.catbox.moe/1cvx2y.jpg" alt="BLK-395 Cover">
+      <a href="Videos/BLK-395.html">Download Now</a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    atOptions = {
+      'key' : '4ad9bc6dd4360ab653a13101431436d8',
+      'format' : 'iframe',
+      'height' : 50,
+      'width' : 320,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//www.highperformanceformat.com/4ad9bc6dd4360ab653a13101431436d8/invoke.js"></script>
 </body>
 </html>
