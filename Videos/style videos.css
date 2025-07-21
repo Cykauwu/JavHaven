@@ -1,7 +1,7 @@
 /* Modern Responsive Dark Effects for Videos Folder */
 /* Reference: style.css for consistency and theme */
 
-/* Layout for centering all content */
+/* Dark background and white text for the whole page */
 body {
   background: #111;
   color: white;
@@ -9,30 +9,39 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
 }
 
-/* Container for each video item */
-.video-center-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2.5rem auto 0 auto;
-  width: 100%;
-  max-width: 380px;
-  background: linear-gradient(135deg, #222 80%, #1c1c1c 100%);
-  border-radius: 18px;
-  box-shadow: 0 6px 32px #0009;
-  padding: 24px 16px 32px 16px;
-  position: relative;
+/* Center images and add dark card effect */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.18s cubic-bezier(.44,.3,.13,1.01), box-shadow 0.18s cubic-bezier(.44,.3,.13,1.01);
+  box-shadow: 0 2px 16px #0007;
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  background: #444;
+  cursor: pointer;
 }
 
-/* Title styling: centered above image */
-.video-title {
-  width: 100%;
+/* Grow effect on hover/focus for desktop */
+img:hover, img:focus {
+  transform: scale(1.08);
+  box-shadow: 0 6px 32px #ff408188, 0 2px 32px #000b;
+  z-index: 2;
+}
+
+/* Grow effect on tap for touchscreen devices */
+@media (pointer: coarse) {
+  img:active {
+    transform: scale(1.12);
+    box-shadow: 0 8px 36px #ff4081cc, 0 2px 36px #000b;
+  }
+}
+
+/* Center the title above the image */
+.title, h1, .video-title {
   text-align: center;
   font-size: 1.4rem;
   font-weight: bold;
@@ -44,38 +53,8 @@ body {
   box-shadow: none;
 }
 
-/* Image styling: centered, dark theme */
-.video-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 340px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px #0007;
-  background: #444;
-  transition: transform 0.18s cubic-bezier(.44,.3,.13,1.01), box-shadow 0.18s cubic-bezier(.44,.3,.13,1.01);
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-/* Grow effect on hover/focus */
-.video-image:hover, .video-image:focus {
-  transform: scale(1.08);
-  box-shadow: 0 6px 32px #ff408188, 0 2px 32px #000b;
-  z-index: 2;
-}
-
-/* Grow effect on tap for touchscreen devices */
-@media (pointer: coarse) {
-  .video-image:active {
-    transform: scale(1.12);
-    box-shadow: 0 8px 36px #ff4081cc, 0 2px 36px #000b;
-  }
-}
-
-/* Home button styling: centered below image */
-.home-btn {
+/* Center the home button below the image */
+.home-btn, .home, .back {
   display: block;
   margin: 26px auto 0 auto;
   text-align: center;
@@ -90,33 +69,51 @@ body {
   transition: background 0.13s, color 0.13s, box-shadow 0.13s;
 }
 
-.home-btn:hover, .home-btn:focus {
+.home-btn:hover, .home-btn:focus,
+.home:hover, .home:focus,
+.back:hover, .back:focus {
   background: linear-gradient(90deg,#4fc3f7 20%,#222 100%);
   color: #222;
   box-shadow: 0 4px 16px #0006;
 }
 
 /* Responsive tweaks for mobile */
-@media (max-width: 600px) {
-  .video-center-container {
-    max-width: 98vw;
-    padding: 10px 4px 20px 4px;
+@media (min-width: 600px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
   }
-  .video-title {
+  img {
+    margin: 0.5rem auto;
+    flex: 0 1 300px;
+  }
+}
+@media (max-width: 599px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+    padding: 1rem;
+  }
+  img {
+    margin: 0.3rem auto;
+    flex: 0 1 48vw;
+  }
+  .title, h1, .video-title {
     font-size: 1.13rem;
     margin-bottom: 10px;
   }
-  .video-image {
-    max-width: 98vw;
-    height: auto;
-  }
-  .home-btn {
+  .home-btn, .home, .back {
     font-size: 1rem;
     padding: 8px 12px;
     margin-top: 16px;
   }
 }
 @media (max-width: 400px) {
-  .video-title { font-size: 1.01rem; }
-  .video-image { height: auto; }
+  .title, h1, .video-title { font-size: 1.01rem; }
+  img { height: auto; }
 }
