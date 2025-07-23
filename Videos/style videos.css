@@ -1,17 +1,12 @@
-/* Modern Responsive Dark Effects for Videos Folder */
-/* Reference: style.css for consistency and theme */
-
-/* Dark background and themed text color for the whole page */
 body {
   background: #111;
-  color: #ff4081; /* Match text color from style.css h1/card div */
+  color: #ff4081;
   font-family: 'Segoe UI', 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
 }
 
-/* Center images and add dark card effect */
 img {
   display: block;
   margin-left: auto;
@@ -25,14 +20,14 @@ img {
   cursor: pointer;
 }
 
-/* Grow effect on hover/focus for desktop */
+/* con esto la imágen crece cuando el mouse está encima de ella */
 img:hover, img:focus {
   transform: scale(1.08);
   box-shadow: 0 6px 32px #ff408188, 0 2px 32px #000b;
   z-index: 2;
 }
 
-/* Grow effect on tap for touchscreen devices */
+/* con esto la imágen crece cuando la tocas en teléfono */
 @media (pointer: coarse) {
   img:active {
     transform: scale(1.12);
@@ -40,7 +35,7 @@ img:hover, img:focus {
   }
 }
 
-/* Center the title above the image */
+/* con esto centra el título encima de la imagen */
 .title, h1, .video-title {
   text-align: center;
   font-size: 1.4rem;
@@ -53,7 +48,7 @@ img:hover, img:focus {
   box-shadow: none;
 }
 
-/* Center the home button below the image */
+/* con esto centras el botón home debajo de la imagen (no jala como quiero lol) */
 .home-btn, .home, .back {
   display: block;
   margin: 26px auto 0 auto;
@@ -77,7 +72,7 @@ img:hover, img:focus {
   box-shadow: 0 4px 16px #0006;
 }
 
-/* Responsive tweaks for mobile */
+/* con esto el sitio es más responsivo en teléfono */
 @media (min-width: 600px) {
   body {
     display: flex;
