@@ -61,14 +61,14 @@ body {
       margin-left: auto;
       margin-right: auto;
     }
-    /* Image scale effect on hover/focus/touch */
+    /* pequeña animación cuando el usuario ponga el mouse/haga click en la imágen */
     .card img:hover, 
     .card img:active, 
     .card:focus-within img {
       transform: scale(1.09);
       box-shadow: 0 6px 32px #ff408188, 0 2px 32px #000b;
     }
-    /* Touch device: scale on tap (active) */
+    /* lo mismo pero para los usuarios de pantallas táctiles */
     @media (hover: none) and (pointer: coarse) {
       .card img:active {
         transform: scale(1.12);
